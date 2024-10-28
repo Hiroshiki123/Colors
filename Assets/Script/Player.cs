@@ -9,10 +9,12 @@ public class Player : MonoBehaviour
     public float limiteTop;
     public float limiteBottom;
     private float color;
+    private SpriteRenderer spritecor;
     // Start is called before the first frame update
     void Start()
     {
         color = Random.Range(1, 4);
+        spritecor = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -22,11 +24,12 @@ public class Player : MonoBehaviour
         limiteBottom = transform.position.y - 16;
         if (color == 1)
         {
-
+            spritecor.color = new Color(0,255,255,255);
         }else if (color == 2)
         {
-
-        }else if (color == 3)
+            spritecor.color = new Color(255, 0, 255, 255);
+        }
+        else if (color == 3)
         {
 
         }else if (color == 4)
@@ -41,7 +44,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "azul")
+        if(collision.gameObject.tag == "ciano")
         {
 
         }
