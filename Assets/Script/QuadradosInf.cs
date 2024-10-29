@@ -8,9 +8,10 @@ public class QuadradosInf : MonoBehaviour
 
     public Vector3 startRotation;
     private float speedRotate;
-    public float limitY;
+    private float limitY;
     private float limitYtop;
     Vector2 initialPosition;
+    public Player player;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +20,16 @@ public class QuadradosInf : MonoBehaviour
         PipePosition(transform.position.y);
         limitYtop = transform.position.y;
         speedRotate = 70;
+
+        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        limitYtop = player.limiteTop;
+        limitY = player.limiteBottom;
         transform.Rotate(Vector3.forward, speedRotate * Time.deltaTime);
 
         
