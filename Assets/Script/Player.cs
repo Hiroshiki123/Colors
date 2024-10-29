@@ -27,14 +27,15 @@ public class Player : MonoBehaviour
             spritecor.color = new Color(0,255,255,255);
         }else if (color == 2)
         {
-            spritecor.color = new Color(255, 0, 255, 255);
+            spritecor.color = new Color(255, 255, 0, 255);
         }
         else if (color == 3)
         {
-
-        }else if (color == 4)
+            spritecor.color = new Color(255, 0, 255, 255);
+        }
+        else if (color == 4)
         {
-
+            spritecor.color = new Color(125, 0, 255, 255);
         }
         if (Input.GetButton("Fire1"))
         {
