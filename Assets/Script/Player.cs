@@ -76,5 +76,9 @@ public class Player : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        if(collision.gameObject.tag == "troca")
+        {
+            color = Random.Range(1, 4);
+        }
     }
 }

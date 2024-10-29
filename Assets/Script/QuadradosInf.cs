@@ -10,13 +10,11 @@ public class QuadradosInf : MonoBehaviour
     private float speedRotate;
     private float limitY;
     private float limitYtop;
-    Vector2 initialPosition;
     public Player player;
     // Start is called before the first frame update
     void Start()
     {
         transform.eulerAngles = startRotation;
-        initialPosition = transform.position;
         PipePosition(transform.position.y);
         limitYtop = transform.position.y;
         speedRotate = 70;
@@ -52,7 +50,6 @@ public class QuadradosInf : MonoBehaviour
 
     void PipePosition(float b)
     {
-        transform.position = initialPosition;
         transform.position = new Vector3(transform.position.x, b);
     }
 }
