@@ -8,6 +8,7 @@ TagManager:
   - amarelo
   - rosa
   - roxo
+  - troca
   layers:
   - Default
   - TransparentFX
