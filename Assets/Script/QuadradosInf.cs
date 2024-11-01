@@ -35,6 +35,7 @@ public class QuadradosInf : MonoBehaviour
             {
                 PipePosition(limitYtop);
             speedRotate = Random.Range(50,100);
+            
             }
         
             

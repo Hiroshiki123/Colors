@@ -22,8 +22,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        limiteTop = transform.position.y + 16;
-        limiteBottom = transform.position.y - 16;
+        limiteTop = transform.position.y + 20;
+        limiteBottom = transform.position.y - 20;
         if (Input.GetButton("Fire1"))
         {
             rb.velocity = Vector2.up*speed;
