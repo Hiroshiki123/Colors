@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
 
     public int totalScore;
     public Text scoreText;
-
+    public Text scoreText2;
     public GameObject gameOver;
 
     public static GameController instance;
@@ -21,8 +21,9 @@ public class GameController : MonoBehaviour
     public void UpdateScoreText()
     {
         scoreText.text = totalScore.ToString();
+        scoreText2.text = totalScore.ToString();
     }
-    public void showGameOver()
+    public void ShowGameOver()
     {
         gameOver.SetActive(true);
     } 

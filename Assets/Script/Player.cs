@@ -54,6 +54,7 @@ public class Player : MonoBehaviour
         {
             if (color != 1)
             {
+                GameController.instance.ShowGameOver();
                 Destroy(gameObject);
             }
         }
@@ -61,6 +62,7 @@ public class Player : MonoBehaviour
         {
             if (color != 2)
             {
+                GameController.instance.ShowGameOver();
                 Destroy(gameObject);
             }
         }
@@ -68,6 +70,7 @@ public class Player : MonoBehaviour
         {
             if (color != 3)
             {
+                GameController.instance.ShowGameOver();
                 Destroy(gameObject);
             }
         }
@@ -75,7 +78,9 @@ public class Player : MonoBehaviour
         {
             if (color != 4)
             {
+                GameController.instance.ShowGameOver();
                 Destroy(gameObject);
+
             }
         }
         if(collision.gameObject.tag == "troca")
