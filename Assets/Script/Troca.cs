@@ -1,21 +1,20 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Itens : MonoBehaviour
+public class Troca : MonoBehaviour
 {
     [SerializeField] SpriteRenderer sr;
     [SerializeField] CircleCollider2D circle;
     private float limitY = -25;
     private float limitYtop = 25;
     public Player player;
-    public int Pontuação;
     // Start is called before the first frame update
     void Update()
     {
         limitY = player.limiteBottom;
         limitYtop = player.limiteTop;
-        
+
 
 
         if (transform.position.y < limitY)
@@ -44,14 +43,10 @@ public class Itens : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.gameObject.tag == "Player")
+        if (collider.gameObject.tag == "Player")
         {
             sr.enabled = false;
             circle.enabled = false;
-
-            GameController.instance.totalScore += Pontuação;
-            GameController.instance.UpdateScoreText();
-
             
         }
     }

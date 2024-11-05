@@ -11,9 +11,6 @@ public class GameController : MonoBehaviour
     public Text scoreText;
 
     public GameObject gameOver;
-    public GameObject gameOver2;
-    public GameObject PF;
-    public GameObject DEMO;
 
     public static GameController instance;
     // Start is called before the first frame update
@@ -29,20 +26,8 @@ public class GameController : MonoBehaviour
     {
         gameOver.SetActive(true);
     } 
-    public void showGameOver2()
-    {
-        gameOver2.SetActive(true);
-    }
     public void RestartGame(string lvlName)
     {
         SceneManager.LoadScene(lvlName);
     }
-    public void showProximafase()
-    {
-        PF.SetActive(true);
-    } 
-    public void showDemo()
-    {
-        DEMO.SetActive(true);
-    } 
 }
