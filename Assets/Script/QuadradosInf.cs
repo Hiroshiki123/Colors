@@ -8,19 +8,20 @@ public class QuadradosInf : MonoBehaviour
 
     
     private float speedRotate;
-    private float limitY;
-    private float limitYtop;
+    private float limitY = -25;
+    private float limitYtop = 25;
     public Player player;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         
-        PipePosition(transform.position.y);
-        limitYtop = transform.position.y+20;
-        limitY = transform.position.y-20;
-        speedRotate = 70;
-
         
+        limitYtop = 25;
+        limitY = -25;
+        speedRotate = 70;
+        PipePosition(transform.position.y);
+
+
 
     }
 
@@ -30,23 +31,23 @@ public class QuadradosInf : MonoBehaviour
         limitY = player.limiteBottom;
         limitYtop = player.limiteTop;
         print(limitY);
-        print(limitYtop+"yop");
+        print(limitYtop);
         transform.Rotate(Vector3.forward, speedRotate * Time.deltaTime);
 
         
            if (transform.position.y < limitY)
            {
-               PipePosition(limitYtop);
-           speedRotate = Random.Range(50,100);
+                PipePosition(limitYtop);
+                speedRotate = Random.Range(50,100);
             
            }
         
             
            if (transform.position.y > limitYtop)
-            {
+           {
                 
-               //PipePosition(limitY);
-
+               PipePosition(limitY);
+                
            }
         
     }

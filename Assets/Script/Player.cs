@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
         color = Random.Range(1, 4);
         spritecor = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+        limiteBottom = -25;
+        limiteTop = 25;
     }
 
     // Update is called once per frame
