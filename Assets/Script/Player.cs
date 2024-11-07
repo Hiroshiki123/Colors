@@ -83,7 +83,15 @@ public class Player : MonoBehaviour
 
             }
         }
-        if(collision.gameObject.tag == "troca")
+        if (collision.gameObject.tag == "morte")
+        {
+            
+                GameController.instance.ShowGameOver();
+                Destroy(gameObject);
+
+            
+        }
+        if (collision.gameObject.tag == "troca")
         {
             color = Random.Range(1, 4);
         }
